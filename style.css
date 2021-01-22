@@ -270,4 +270,37 @@ nav .nav_side .nav .nav-item {
   font-family: "Potta One", cursive;
 }
 
+.my_work .img-work {
+  height: 400px;
+  background-size: cover;
+}
+
+#container_box {
+  transform: scale(0, 0);
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  z-index: 100000;
+  transition: all 0.5s;
+}
+#container_box #item {
+  position: relative;
+  width: 50%;
+  background-position: center;
+  padding: 30px 0;
+  height: 400px;
+}
+#container_box #item .btn-close {
+  position: absolute;
+  left: -57px;
+  top: 20px;
+  font-size: 40px;
+  color: brown;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -70,4 +70,15 @@ $(function() {
         $(this).text("Contact", 2000);
     });
 
+
+    ;
+    $(".my_work img").on("click", function(e) {
+        $("#container_box").css("transform", 'scale(1,1)');
+        $("#item img").attr("src", e.target.src)
+    });
+
+    $("#container_box").on("click", function(e) {
+        $("#container_box").css("transform", 'scale(0,0)');
+    });
+
 });
