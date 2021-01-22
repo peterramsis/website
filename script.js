@@ -75,6 +75,7 @@ $(function() {
     $(".my_work img").on("click", function(e) {
         $("#container_box").css("transform", 'scale(1,1)');
         $("#item img").attr("src", e.target.src)
+        $("html,body").animate({ scrollTop: 0 }, "slow");
     });
 
     $("#container_box").on("click", function(e) {
