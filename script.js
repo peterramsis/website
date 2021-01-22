@@ -1,8 +1,6 @@
 $(function() {
 
-
-
-
+    // resize
     $(window).resize(function() {
         $(".loading").css({
             "height": $(window).innerHeight(),
