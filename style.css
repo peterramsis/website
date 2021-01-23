@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
   width: 50px;
   height: 50px;
   opacity: 0;
-  font-size: 27px;
+  font-size: 2rem;
   font-family: "Dancing Script", cursive;
   animation: move 2s linear infinite;
   -o-animation: move 2s linear infinite;
@@ -237,7 +237,7 @@ nav .btn_event {
   font-size: 30px;
   position: fixed;
   right: 38px;
-  z-index: 9999;
+  z-index: 1000001;
   width: 30px;
 }
 nav .btn_event > span {
@@ -258,6 +258,7 @@ nav .nav_side {
   bottom: 0;
   right: 0;
   width: 107px;
+  z-index: 1000000;
 }
 nav .nav_side .nav {
   margin-top: 75px;
@@ -310,6 +311,13 @@ nav .nav_side .nav .nav-item {
   top: 20px;
   font-size: 40px;
   color: brown;
+}
+
+/* media */
+@media only screen and (max-width: 768px) {
+  .flex-mobile {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

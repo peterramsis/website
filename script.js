@@ -17,6 +17,42 @@ $(function() {
             "height": $(window).innerHeight(),
             "width": $(window).innerWidth()
         })
+
+        $(".page").css({
+            "height": $(window).innerHeight() + 200,
+        });
+
+
+
+
+        if ($(this).innerWidth() > 768) {
+            $(".my_work").css({
+                "height": $(window).innerHeight(),
+            });
+        }
+
+
+        $(".contact-us").css({
+            "height": "300px",
+        });
+    });
+
+    $(".page").css({
+        "height": $(window).innerHeight() + 200,
+    });
+
+
+
+
+    if ($(this).innerWidth() > 768) {
+        $(".my_work").css({
+            "height": $(window).innerHeight(),
+        });
+    }
+
+
+    $(".contact-us").css({
+        "height": "300px",
     });
 
     $(".loading").css({
@@ -54,23 +90,11 @@ $(function() {
     });
 
     console.log($(window).innerWidth());
-    if ($(window).innerWidth() > 768) {
-
-        $(".page").css({
-            "height": $(window).innerHeight(),
-        });
-
-        $(".my_work").css({
-            "height": $(window).innerHeight() - 200,
-        });
 
 
 
-        $(".contact-us").css({
-            "height": "300px",
-        });
 
-    }
+
 
 
 
