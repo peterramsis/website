@@ -49,22 +49,29 @@ $(function() {
         }, 90);
 
     $(".btn_event").on("click", function() {
+
         $(".nav_side").toggleClass("hide");
     });
 
-    $(".page").css({
-        "height": $(window).innerHeight(),
-    });
+    console.log($(window).innerWidth());
+    if ($(window).innerWidth() > 768) {
 
-    $(".my_work").css({
-        "height": $(window).innerHeight() - 200,
-    });
+        $(".page").css({
+            "height": $(window).innerHeight(),
+        });
+
+        $(".my_work").css({
+            "height": $(window).innerHeight() - 200,
+        });
 
 
 
-    $(".contact-us").css({
-        "height": "300px",
-    });
+        $(".contact-us").css({
+            "height": "300px",
+        });
+
+    }
+
 
 
     $(".home").on("mouseover", function() {
