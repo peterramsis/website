@@ -10,7 +10,16 @@ body {
 }
 
 .hide {
-  right: 0px !important;
+  right: -107px !important;
+}
+
+.phone {
+  text-decoration: none;
+  color: white;
+}
+.phone:hover {
+  color: #ccc;
+  text-decoration: none;
 }
 
 body::-webkit-scrollbar {
@@ -226,7 +235,7 @@ nav {
 nav .btn_event {
   margin-top: 20px;
   font-size: 30px;
-  position: absolute;
+  position: fixed;
   right: 38px;
   z-index: 9999;
   width: 30px;
@@ -247,7 +256,7 @@ nav .nav_side {
   background-color: #181818;
   top: 0;
   bottom: 0;
-  right: -107px;
+  right: 0;
   width: 107px;
 }
 nav .nav_side .nav {
@@ -272,7 +281,7 @@ nav .nav_side .nav .nav-item {
 
 .my_work .img-work {
   height: 400px;
-  background-size: cover;
+  object-fit: contain;
 }
 
 #container_box {

@@ -1,5 +1,16 @@
 $(function() {
 
+    $(document).on("click", ".link", function(e) {
+
+
+        // $("html,body").animate({
+        //     scrollTop: $($(this).data("scroll")).offset().top
+        // });
+
+        console.log("click");
+
+    });
+
     // resize
     $(window).resize(function() {
         $(".loading").css({
@@ -45,9 +56,19 @@ $(function() {
         "height": $(window).innerHeight(),
     });
 
+    $(".my_work").css({
+        "height": $(window).innerHeight() - 200,
+    });
+
+
+
+    $(".contact-us").css({
+        "height": "300px",
+    });
+
 
     $(".home").on("mouseover", function() {
-        $(this).html('<i class="fas fa-home"></i>', 2000);
+        $(this).html('<i class="fas fa-home link" data-scroll=".page"></i>', 2000);
     });
     $(".home").on("mouseleave", function() {
         $(this).text("Home", 2000);
@@ -56,7 +77,7 @@ $(function() {
 
 
     $(".work").on("mouseover", function() {
-        $(this).html('<i class="fas fa-wrench"></i>', 200);
+        $(this).html('<i class="fas fa-wrench link" data-scroll=".contact_us"></i>', 200);
     });
     $(".work").on("mouseleave", function() {
         $(this).text("My Work", 200);
@@ -64,14 +85,20 @@ $(function() {
 
 
     $(".contact").on("mouseover", function() {
-        $(this).html('<i class="far fa-envelope"></i>', 2000);
+        $(this).html('<i class="far fa-envelope link"></i>', 2000);
     });
     $(".contact").on("mouseleave", function() {
         $(this).text("Contact", 2000);
     });
 
+    $(".phone").on("mouseover", function() {
+        $(this).text("01220447398", 2000);
 
-    ;
+    });
+    $(".phone").on("mouseleave", function() {
+        $(this).html('<i class="fas fa-phone-square-alt fa-7x text-light"></i>', 2000);
+    });
+
     $(".my_work img").on("click", function(e) {
         $("#container_box").css("transform", 'scale(1,1)');
         $("#item img").attr("src", e.target.src)
@@ -81,5 +108,19 @@ $(function() {
     $("#container_box").on("click", function(e) {
         $("#container_box").css("transform", 'scale(0,0)');
     });
+
+
+    // scroll 
+
+    $(".nav_side li").on("click", function(e) {
+
+        e.preventDefault();
+        $("html,body").animate({
+            scrollTop: $($(this).data("scroll")).offset().top
+        });
+
+    });
+
+
 
 });
